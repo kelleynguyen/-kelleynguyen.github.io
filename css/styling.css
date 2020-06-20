@@ -1,0 +1,253 @@
+/**  Resets **/
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: #000;
+  color: #fff;
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
+:focus {
+  outline: 0;
+}
+
+/** Global**/
+
+body,
+html {
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent /*!content_center*/;
+  text-align: left /*!text_left*/;
+  min-height: 100vh /*!content_stretch*/;
+  -webkit-align-items: flex-start /*!vertical_top*/;
+  align-items: flex-start /*!vertical_top*/;
+  left: 0 /*!content_center*/;
+  margin-left: auto /*!content_center*/;
+  margin-right: auto /*!content_center*/;
+  right: 0 /*!content_center*/;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+/* Video Page */
+
+#video_title {
+  animation-name: fadeIn 7s;
+  -webkit-animation: fadeIn 7s;
+  -moz-animation: fadeIn 7s;
+  -o-animation: fadeIn 7s;
+  -ms-animation: fadeIn 7s;
+}
+
+#video-overlay {
+  background: url(https://www.dropbox.com/s/yacj00odt5ql5am/blu-stripes.png?dl=1) repeat, rgba(0, 0, 0, 0.45);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.fullscreen-bg {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background-color: black;
+  }
+
+  .fullscreen-bg_video {
+    display: none;
+  }
+}
+
+/**
+ * Content
+ */
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+ul,
+ol {
+  padding: 0 0 0 1em;
+  margin-left: 15px;
+  list-style-type: circle;
+}
+
+ul li {
+  padding-bottom: 5px;
+}
+
+main {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgb(70, 70, 70);
+  font-family: 'Source Serif Pro' /*!Google*/;
+  font-style: normal;
+  line-height: 1.7em;
+}
+
+main a {
+  color: rgb(44, 44, 44);
+  padding-bottom: 0em;
+}
+
+h1 {
+	font-family: Fort, Social /*!Persona*/;
+	font-style: normal;
+	font-weight: 700;
+	padding: 0;
+	margin: 0;
+	font-size: 2.5rem;
+	line-height: 1.5;
+	color: rgba(0, 0, 0, 1);
+	text-rendering: optimizeLegibility;
+}
+
+h1.video {
+	font-family: "Titling Gothic FB Normal", Social /*!Persona*/;
+	font-style: normal;
+	font-weight: 700;
+	padding: 0;
+	margin: 0;
+	font-size: 4.8rem;
+	line-height: 1.1;
+	color: rgba(0, 0, 0, 0.85);
+	text-rendering: optimizeLegibility;
+}
+
+h1 a {
+	color: rgba(0, 0, 0, 0.85);
+    text-decoration: underline;
+}
+
+h2 {
+	font-family: Fort, Social /*!Persona*/;
+	font-style: normal;
+	font-weight: 700;
+	padding: 0;
+	margin: 0;
+	color: rgba(0, 0, 0, 1);
+	font-size: 2rem;
+	line-height: 1.6;
+	text-rendering: optimizeLegibility;
+}
+
+h2 a {
+	color: rgba(0, 0, 0, 0.85);
+    text-decoration:underline;
+}
+
+h3 {
+	font-family: "Source Serif Pro", Social /*!Google*/;
+	font-style: normal;
+	font-weight: 600;
+	padding: 0;
+	margin: 0;
+	color: rgba(0, 0, 0, 0.85);
+	font-size: 1.5rem;
+	line-height: 1.5em;
+	text-rendering: optimizeLegibility;
+}
+
+h3 a{
+    color: rgb(0, 0, 0);
+    padding-bottom: 0em;
+    border-bottom: 4px #ffd31d solid;
+    text-decoration: none;
+    line-height: 1.5em;
+}
+
+small {
+	display: inline-block;
+	font-size: 1.3rem;
+	line-height: 1.5em;
+	font-family: "Nitti Grotesk", Social /*!Persona*/;
+	font-style: normal;
+	font-weight: 400;
+	color: rgb(38, 38, 38);
+    padding: 5px 0px;
+}
+
+small a {
+	color: rgba(0, 0, 0, 0.4);
+    text-decoration: underline;
+}
+
+.white {
+	color: rgba(255, 255, 255, 1);
+}
+
+.white a {
+	color: rgba(255, 255, 255, 1);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+
+.white a:hover{
+	transform: scale(1.04);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
